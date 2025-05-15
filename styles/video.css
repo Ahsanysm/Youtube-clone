@@ -1,0 +1,94 @@
+.video-grid {
+  margin-top: 80px; /* This pushes the content below the 64px header */
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 16px;
+  row-gap: 40px;
+  padding: 20px;
+ 
+}
+
+@media(max-width:750px){  /*this css will activate only when scereen size is 600px*/
+   .video-grid {
+  grid-template-columns:  1fr 1fr;
+}
+}
+@media(min-width:751px) and (max-width:999px){ /*it will cover in between above two cases*/
+.video-grid{
+  grid-template-columns: 1fr 1fr 1fr;
+}
+}
+@media(min-width:1000px){ /* 4 videos will be on screen if screen size is 1000px*/
+  .video-grid{
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+}
+
+.video-preview {
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.thumbnail-container {
+  position: relative;
+  width: 100%;
+}
+
+.thumbnail {
+  width: 100%;
+  border-radius: 12px;
+  object-fit: cover;
+  display: block;
+}
+
+.video-time {
+  background-color: rgba(0, 0, 0, 0.8);
+  color: white;
+  font-size: 12px;
+  padding: 2px 4px; /* first padding is vertical padding and second is horizontal padding*/
+  /* if we have padding:2px 4px 3px 5px it means padding top>right>bottom>left*/
+  /* if we have margin: 2px 4px 1px 7px it means margin top>right>bottom>left i.e clockwise*/
+  position: absolute;
+  bottom: 8px;
+  right: 8px;
+  border-radius: 4px;
+  font-family: Roboto,Arial;
+  font-weight: 500;
+  padding:4px 2px;
+  border-radius: 2px;
+}
+
+.video-info-container {
+  display: flex;
+  margin-top: 8px;
+}
+
+.channel-picture {
+  width: 50px;
+  margin-right: 10px;
+}
+
+.profile-picture {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+}
+
+.video-info {
+  flex: 1;
+}
+
+.video-title {
+  font-size: 16px;
+  font-weight: 500;
+  margin: 0;
+  line-height: 20px;
+}
+
+.video-author,
+.video-stats {
+  font-size: 14px;
+  color: rgb(96, 96, 96);
+  margin: 2px 0;
+}
