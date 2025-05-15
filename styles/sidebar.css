@@ -28,5 +28,10 @@
 .sidebar-link div{
   font-size:10px;
   font-family: Roboto,Arial;
-
+}
+@media (max-width: 768px) {
+  /* Hide sidebar for mobile */
+  .sidebar {
+    display: none;
+  }
 }
